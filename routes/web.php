@@ -107,3 +107,15 @@ $router->group(['prefix' => 'client'], function () use ($router) {
     
       $router->put('ajoutstocks/{id}', ['uses' => 'AjoutstockController@update']);
     });
+      ////bonretour
+      $router->group(['prefix' => 'bonretour'], function () use ($router) {
+        $router->get('bonretours',  ['uses' => 'BonretourController@showAll']);
+      
+        $router->get('bonretours/{id}', ['uses' => 'BonretourController@showOne']);
+      
+        $router->post('bonretours', ['uses' => 'BonretourController@create']);
+      
+        $router->delete('bonretours/{id}', ['uses' => 'BonretourController@delete']);
+      
+        $router->put('bonretours/{id}', ['uses' => 'BonretourController@update']);
+      });
