@@ -20,6 +20,7 @@ class CreateClientTable extends Migration
             $table->string('sexe');
             $table->string('email');
             $table->integer('tel');
+            $table->string('adresse');
             $table->string('nom_societe');
             $table->timestamps();
             $table->unsignedBigInteger('region_id');

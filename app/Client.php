@@ -14,7 +14,7 @@ class Client extends Model
      */
     protected $table = 'client'; //name's table
     protected $fillable = [
-      'nom', 'email', 'prenom', 'sexe', 'tel', 'nom_societe','region_id'
+      'nom', 'email', 'prenom', 'sexe', 'tel', 'nom_societe','region_id','adresse'
     ];
 
     /**

@@ -19,7 +19,8 @@ class CreateProduitTable extends Migration
             $table->string('libelle');
             $table->string('ref');
             $table->string('note');
-            $table->float('prix');
+            $table->float('prix_location');
+            $table->float('prix_location_minimale');
             $table->unsignedBigInteger('qrCode_id');
             $table->foreign('qrCode_id')->references('id')->on('qrCode');
 
