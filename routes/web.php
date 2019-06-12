@@ -55,3 +55,16 @@ $router->group(['prefix' => 'client'], function () use ($router) {
   
     $router->put('ressources/{id}', ['uses' => 'RessourceController@update']);
   });
+
+    ////produit
+    $router->group(['prefix' => 'produit'], function () use ($router) {
+      $router->get('produits',  ['uses' => 'ProduitController@showAll']);
+    
+      $router->get('produits/{id}', ['uses' => 'ProduitController@showOne']);
+    
+      $router->post('produits', ['uses' => 'ProduitController@create']);
+    
+      $router->delete('produits/{id}', ['uses' => 'ProduitController@delete']);
+    
+      $router->put('produits/{id}', ['uses' => 'ProduitController@update']);
+    });
