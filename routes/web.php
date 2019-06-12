@@ -45,13 +45,13 @@ $router->group(['prefix' => 'client'], function () use ($router) {
   });
   ////ressource
   $router->group(['prefix' => 'ressource'], function () use ($router) {
-    $router->get('users',  ['uses' => 'UsersController@showAllUsers']);
+    $router->get('ressources',  ['uses' => 'RessourceController@showAll']);
   
-    $router->get('users/{id}', ['uses' => 'UsersController@showOneUser']);
+    $router->get('ressources/{id}', ['uses' => 'RessourceController@showOne']);
   
-    $router->post('userscreate', ['uses' => 'UsersController@create']);
+    $router->post('ressources', ['uses' => 'RessourceController@create']);
   
-    $router->delete('users/{id}', ['uses' => 'UsersController@delete']);
+    $router->delete('ressources/{id}', ['uses' => 'RessourceController@delete']);
   
-    $router->put('users/{id}', ['uses' => 'UsersController@update']);
+    $router->put('ressources/{id}', ['uses' => 'RessourceController@update']);
   });
