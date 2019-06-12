@@ -131,3 +131,15 @@ $router->group(['prefix' => 'client'], function () use ($router) {
         
           $router->put('bonsorties/{id}', ['uses' => 'BonsortieController@update']);
         });
+           ////employeur
+           $router->group(['prefix' => 'employeur'], function () use ($router) {
+            $router->get('employeurs',  ['uses' => 'EmployeurController@showAll']);
+          
+            $router->get('employeurs/{id}', ['uses' => 'EmployeurController@showOne']);
+          
+            $router->post('employeurs', ['uses' => 'EmployeurController@create']);
+          
+            $router->delete('employeurs/{id}', ['uses' => 'EmployeurController@delete']);
+          
+            $router->put('employeurs/{id}', ['uses' => 'EmployeurController@update']);
+          });

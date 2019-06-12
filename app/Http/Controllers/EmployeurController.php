@@ -1,32 +1,32 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Bonsortie;
+use App\Employeur;
 use Illuminate\Http\Request;
 
-class BonsortieController extends Controller
+class EmployeurController extends Controller
 {
 
     public function showAll()
     {
-        return response()->json(Bonsortie::all());
+        return response()->json(Employeur::all());
     }
 
     public function showOne($id)
     {
-        return response()->json(Bonsortie::find($id));
+        return response()->json(Employeur::find($id));
     }
 
     public function create(Request $request)
     {
-        $a = Bonsortie::create($request->all());
+        $a = Employeur::create($request->all());
 
         return response()->json($a, 201);
     }
 
     public function update($id, Request $request)
     {
-        $a= Bonsortie::findOrFail($id);
+        $a= Employeur::findOrFail($id);
         $a->update($request->all());
 
         return response()->json($author, 200);
@@ -34,7 +34,7 @@ class BonsortieController extends Controller
 
     public function delete($id)
     {
-        Bonretour::findOrFail($id)->delete();
+        Employeur::findOrFail($id)->delete();
         return response('Deleted Successfully', 200);
     }
 }
