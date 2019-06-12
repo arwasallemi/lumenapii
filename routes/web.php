@@ -119,3 +119,15 @@ $router->group(['prefix' => 'client'], function () use ($router) {
       
         $router->put('bonretours/{id}', ['uses' => 'BonretourController@update']);
       });
+        ////bonsortie
+        $router->group(['prefix' => 'bonsortie'], function () use ($router) {
+          $router->get('bonsorties',  ['uses' => 'BonsortieController@showAll']);
+        
+          $router->get('bonsorties/{id}', ['uses' => 'BonsortieController@showOne']);
+        
+          $router->post('bonsorties', ['uses' => 'BonsortieController@create']);
+        
+          $router->delete('bonsorties/{id}', ['uses' => 'BonsortieController@delete']);
+        
+          $router->put('bonsorties/{id}', ['uses' => 'BonsortieController@update']);
+        });
