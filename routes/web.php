@@ -81,3 +81,16 @@ $router->group(['prefix' => 'client'], function () use ($router) {
       
         $router->put('regions/{id}', ['uses' => 'RegionController@update']);
       });
+
+           ////ville
+           $router->group(['prefix' => 'ville'], function () use ($router) {
+            $router->get('villes',  ['uses' => 'VilleController@showAll']);
+          
+            $router->get('villes/{id}', ['uses' => 'VilleController@showOne']);
+          
+            $router->post('villes', ['uses' => 'VilleController@create']);
+          
+            $router->delete('villes/{id}', ['uses' => 'VilleController@delete']);
+          
+            $router->put('villes/{id}', ['uses' => 'VilleController@update']);
+          });
