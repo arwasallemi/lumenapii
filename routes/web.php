@@ -68,3 +68,16 @@ $router->group(['prefix' => 'client'], function () use ($router) {
     
       $router->put('produits/{id}', ['uses' => 'ProduitController@update']);
     });
+
+      ////region
+      $router->group(['prefix' => 'region'], function () use ($router) {
+        $router->get('regions',  ['uses' => 'RegionController@showAll']);
+      
+        $router->get('regions/{id}', ['uses' => 'RegionController@showOne']);
+      
+        $router->post('regions', ['uses' => 'RegionController@create']);
+      
+        $router->delete('regions/{id}', ['uses' => 'RegionController@delete']);
+      
+        $router->put('regions/{id}', ['uses' => 'RegionController@update']);
+      });
