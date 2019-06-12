@@ -14,7 +14,7 @@ class Produit extends Model
      */
     protected $table='produit';
     protected $fillable = [
-        'libelle', 'ref', 'note', 'prix', 'qrCode_id', 'codeBarre_id','image_id'
+        'libelle', 'ref', 'note', 'prix_location','prix_location_minimale', 'qrCode_id', 'codeBarre_id','image_id'
     ];
 
     /**
