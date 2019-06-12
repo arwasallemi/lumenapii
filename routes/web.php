@@ -82,7 +82,7 @@ $router->group(['prefix' => 'client'], function () use ($router) {
         $router->put('regions/{id}', ['uses' => 'RegionController@update']);
       });
 
-           ////ville
+      ////ville
            $router->group(['prefix' => 'ville'], function () use ($router) {
             $router->get('villes',  ['uses' => 'VilleController@showAll']);
           
@@ -94,3 +94,16 @@ $router->group(['prefix' => 'client'], function () use ($router) {
           
             $router->put('villes/{id}', ['uses' => 'VilleController@update']);
           });
+
+    ////ajoutstock
+    $router->group(['prefix' => 'ajoutstock'], function () use ($router) {
+      $router->get('ajoutstocks',  ['uses' => 'AjoutstockController@showAll']);
+    
+      $router->get('ajoutstocks/{id}', ['uses' => 'AjoutstockController@showOne']);
+    
+      $router->post('ajoutstocks', ['uses' => 'AjoutstockController@create']);
+    
+      $router->delete('ajoutstocks/{id}', ['uses' => 'AjoutstockController@delete']);
+    
+      $router->put('ajoutstocks/{id}', ['uses' => 'AjoutstockController@update']);
+    });
