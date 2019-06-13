@@ -155,3 +155,15 @@ $router->group(['prefix' => 'client'], function () use ($router) {
                   
                     $router->put('entrepots/{id}', ['uses' => 'EntrepotController@update']);
                   });
+   ////image
+   $router->group(['prefix' => 'image'], function () use ($router) {
+    $router->get('images',  ['uses' => 'ImageController@showAll']);
+  
+    $router->get('images/{id}', ['uses' => 'ImageController@showOne']);
+  
+    $router->post('images', ['uses' => 'ImageController@create']);
+  
+    $router->delete('images/{id}', ['uses' => 'ImageController@delete']);
+  
+    $router->put('images/{id}', ['uses' => 'ImageController@update']);
+  });
