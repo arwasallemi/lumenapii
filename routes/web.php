@@ -289,3 +289,15 @@ $router->group(['prefix' => 'client'], function () use ($router) {
     
       $router->put('modes/{id}', ['uses' => 'ModeController@update']);
     });
+     ////devis
+     $router->group(['prefix' => 'devis'], function () use ($router) {
+      $router->get('devis',  ['uses' => 'DevisController@showAll']);
+    
+      $router->get('devis/{id}', ['uses' => 'DevisController@showOne']);
+    
+      $router->post('devis', ['uses' => 'DevisController@create']);
+    
+      $router->delete('devis/{id}', ['uses' => 'DevisController@delete']);
+    
+      $router->put('devis/{id}', ['uses' => 'DevisController@update']);
+    });
