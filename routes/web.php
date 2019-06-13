@@ -167,3 +167,53 @@ $router->group(['prefix' => 'client'], function () use ($router) {
   
     $router->put('images/{id}', ['uses' => 'ImageController@update']);
   });
+     ////operaion
+     $router->group(['prefix' => 'operation'], function () use ($router) {
+      $router->get('operations',  ['uses' => 'OperationController@showAll']);
+    
+      $router->get('operations/{id}', ['uses' => 'OperationController@showOne']);
+    
+      $router->post('operations', ['uses' => 'OperationController@create']);
+    
+      $router->delete('operations/{id}', ['uses' => 'OperationController@delete']);
+    
+      $router->put('operations/{id}', ['uses' => 'OperationController@update']);
+    });
+
+     ////perte
+     $router->group(['prefix' => 'perte'], function () use ($router) {
+      $router->get('pertes',  ['uses' => 'PerteController@showAll']);
+    
+      $router->get('pertes/{id}', ['uses' => 'PerteController@showOne']);
+    
+      $router->post('pertes', ['uses' => 'PerteController@create']);
+    
+      $router->delete('pertes/{id}', ['uses' => 'PerteController@delete']);
+    
+      $router->put('pertes/{id}', ['uses' => 'PerteController@update']);
+    });
+         ////regularisation
+         $router->group(['prefix' => 'regularisation'], function () use ($router) {
+          $router->get('regularisations',  ['uses' => 'RegularisationController@showAll']);
+        
+          $router->get('regularisations/{id}', ['uses' => 'RegularisationController@showOne']);
+        
+          $router->post('regularisations', ['uses' => 'RegularisationController@create']);
+        
+          $router->delete('regularisations/{id}', ['uses' => 'RegularisationController@delete']);
+        
+          $router->put('regularisations/{id}', ['uses' => 'RegularisationController@update']);
+        });
+
+        ////societe
+        $router->group(['prefix' => 'societe'], function () use ($router) {
+          $router->get('societes',  ['uses' => 'SocieteController@showAll']);
+        
+          $router->get('societes/{id}', ['uses' => 'SocieteController@showOne']);
+        
+          $router->post('societes', ['uses' => 'SocieteController@create']);
+        
+          $router->delete('societes/{id}', ['uses' => 'SocieteController@delete']);
+        
+          $router->put('societes/{id}', ['uses' => 'SocieteController@update']);
+        });
