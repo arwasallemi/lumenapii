@@ -229,3 +229,27 @@ $router->group(['prefix' => 'client'], function () use ($router) {
           
             $router->put('stocks/{id}', ['uses' => 'StockController@update']);
           });
+         ////categorie
+         $router->group(['prefix' => 'categorie'], function () use ($router) {
+          $router->get('categories',  ['uses' => 'CategorieController@showAll']);
+        
+          $router->get('categories/{id}', ['uses' => 'CategorieController@showOne']);
+        
+          $router->post('categories', ['uses' => 'CategorieController@create']);
+        
+          $router->delete('categories/{id}', ['uses' => 'CategorieController@delete']);
+        
+          $router->put('categories/{id}', ['uses' => 'CategorieController@update']);
+        });
+      ////tva
+      $router->group(['prefix' => 'tva'], function () use ($router) {
+        $router->get('tvas',  ['uses' => 'TvaController@showAll']);
+      
+        $router->get('tvas/{id}', ['uses' => 'TvaController@showOne']);
+      
+        $router->post('tvas', ['uses' => 'TvaController@create']);
+      
+        $router->delete('tvas/{id}', ['uses' => 'TvaController@delete']);
+      
+        $router->put('tvas/{id}', ['uses' => 'TvaController@update']);
+      });
