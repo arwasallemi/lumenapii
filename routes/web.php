@@ -217,3 +217,15 @@ $router->group(['prefix' => 'client'], function () use ($router) {
         
           $router->put('societes/{id}', ['uses' => 'SocieteController@update']);
         });
+          ////stock
+          $router->group(['prefix' => 'stock'], function () use ($router) {
+            $router->get('stocks',  ['uses' => 'StockController@showAll']);
+          
+            $router->get('stocks/{id}', ['uses' => 'StockController@showOne']);
+          
+            $router->post('stocks', ['uses' => 'StockController@create']);
+          
+            $router->delete('stocks/{id}', ['uses' => 'StockController@delete']);
+          
+            $router->put('stocks/{id}', ['uses' => 'StockController@update']);
+          });
