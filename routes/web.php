@@ -143,3 +143,15 @@ $router->group(['prefix' => 'client'], function () use ($router) {
           
             $router->put('employeurs/{id}', ['uses' => 'EmployeurController@update']);
           });
+           ////entrepot
+                  $router->group(['prefix' => 'entrepot'], function () use ($router) {
+                    $router->get('entrepots',  ['uses' => 'EntrepotController@showAll']);
+                  
+                    $router->get('entrepots/{id}', ['uses' => 'EntrepotController@showOne']);
+                  
+                    $router->post('entrepots', ['uses' => 'EntrepotController@create']);
+                  
+                    $router->delete('entrepots/{id}', ['uses' => 'EntrepotController@delete']);
+                  
+                    $router->put('entrepots/{id}', ['uses' => 'EntrepotController@update']);
+                  });
