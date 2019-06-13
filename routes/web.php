@@ -253,3 +253,39 @@ $router->group(['prefix' => 'client'], function () use ($router) {
       
         $router->put('tvas/{id}', ['uses' => 'TvaController@update']);
       });
+    ////condition
+    $router->group(['prefix' => 'condition'], function () use ($router) {
+      $router->get('conditions',  ['uses' => 'ConditionController@showAll']);
+    
+      $router->get('conditions/{id}', ['uses' => 'ConditionController@showOne']);
+    
+      $router->post('conditions', ['uses' => 'ConditionController@create']);
+    
+      $router->delete('conditions/{id}', ['uses' => 'ConditionController@delete']);
+    
+      $router->put('conditions/{id}', ['uses' => 'ConditionController@update']);
+    });
+    ////delai
+    $router->group(['prefix' => 'delai'], function () use ($router) {
+      $router->get('delais',  ['uses' => 'DelaiController@showAll']);
+    
+      $router->get('delais/{id}', ['uses' => 'DelaiController@showOne']);
+    
+      $router->post('delais', ['uses' => 'DelaiController@create']);
+    
+      $router->delete('delais/{id}', ['uses' => 'DelaiController@delete']);
+    
+      $router->put('delais/{id}', ['uses' => 'DelaiController@update']);
+    });
+    ////tva
+    $router->group(['prefix' => 'mode'], function () use ($router) {
+      $router->get('modes',  ['uses' => 'ModeController@showAll']);
+    
+      $router->get('modes/{id}', ['uses' => 'ModeController@showOne']);
+    
+      $router->post('modes', ['uses' => 'ModeController@create']);
+    
+      $router->delete('modes/{id}', ['uses' => 'ModeController@delete']);
+    
+      $router->put('modes/{id}', ['uses' => 'ModeController@update']);
+    });
