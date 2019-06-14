@@ -14,8 +14,9 @@ class Bonsortie extends Model
      */
     protected $table='bonsortie';
     protected $fillable = [
-         'dateSortie','dateRetour','dateCreation','dateEvenement','dateDebutEvenement','dateFinEvenement','rue','chauffeur_externe_nom','chauffeur_externe_tel','codePostal',
-         'etat','evenement','retour','matricule','client_id','region_id','entrepot_id','employeur_id'
+         'dateSortie','dateRetour','adresse_client','dateEvenement',
+         'transporteur_nom','transporteur_tel',
+         'nom_client', 'etat','evenement','matricule'
     ];
 
     /**
