@@ -15,7 +15,7 @@ class CreateListeBonSortieTable extends Migration
     {
         Schema::create('listeBonSortie', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->boolean('ref');
+            $table->string('ref');
             $table->integer('qte');
             $table->unsignedBigInteger('bonSortie_id');
             $table->foreign('bonSortie_id')->references('id')->on('bonSortie');

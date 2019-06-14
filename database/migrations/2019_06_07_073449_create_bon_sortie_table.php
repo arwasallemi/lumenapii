@@ -23,10 +23,9 @@ class CreateBonSortieTable extends Migration
             $table->string('transporteur_nom');
             $table->integer('transporteur_tel');
             $table->string('etat');
+            $table->string('matricule');
             $table->string('evenement');
-
             $table->string('nom_client');
-            $table->string('adresse_client'); 
           
           
 

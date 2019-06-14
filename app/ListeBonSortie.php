@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Bonsortie extends Model
+class ListeBonSortie extends Model
 {
 
     /**
@@ -12,11 +12,9 @@ class Bonsortie extends Model
      *
      * @var array
      */
-    protected $table='bonsortie';
+    protected $table='listebonsortie';
     protected $fillable = [
-         'dateSortie','dateRetour','dateEvenement',
-         'transporteur_nom','transporteur_tel',
-         'nom_client', 'etat','evenement','matricule','adresse_livraison'
+        'ref','qte','bonSortie_id'
     ];
 
     /**

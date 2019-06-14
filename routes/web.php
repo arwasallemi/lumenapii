@@ -301,3 +301,15 @@ $router->group(['prefix' => 'client'], function () use ($router) {
     
       $router->put('devis/{id}', ['uses' => 'DevisController@update']);
     });
+    //liste Bon sortie 
+      $router->group(['prefix' => 'listeBonSortie'], function () use ($router) {
+        $router->get('listeBonSortie',  ['uses' => 'ListeBonSortieController@showAll']);
+      
+        $router->get('listeBonSortie/{id}', ['uses' => 'ListeBonSortieController@showOne']);
+      
+        $router->post('listeBonSorties', ['uses' => 'ListeBonSortieController@create']);
+      
+        $router->delete('listeBonSortie/{id}', ['uses' => 'ListeBonSortieController@delete']);
+      
+        $router->put('listeBonSortie/{id}', ['uses' => 'ListeBonSortieController@update']);
+      });
