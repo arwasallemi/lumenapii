@@ -109,6 +109,7 @@ $router->group(['prefix' => 'client'], function () use ($router) {
     });
       ////bonretour
       $router->group(['prefix' => 'bonretour'], function () use ($router) {
+        
         $router->get('bonretours',  ['uses' => 'BonretourController@showAll']);
       
         $router->get('bonretours/{id}', ['uses' => 'BonretourController@showOne']);
@@ -121,6 +122,7 @@ $router->group(['prefix' => 'client'], function () use ($router) {
       });
         ////bonsortie
         $router->group(['prefix' => 'bonsortie'], function () use ($router) {
+
           $router->get('bonsorties',  ['uses' => 'BonsortieController@showAll']);
         
           $router->get('bonsorties/{id}', ['uses' => 'BonsortieController@showOne']);
@@ -313,3 +315,41 @@ $router->group(['prefix' => 'client'], function () use ($router) {
       
         $router->put('listeBonSortie/{id}', ['uses' => 'ListeBonSortieController@update']);
       });
+        //liste Bon retour
+        $router->group(['prefix' => 'listeBonRetour'], function () use ($router) {
+          $router->get('listeBonRetour',  ['uses' => 'ListeBonRetourController@showAll']);
+        
+          $router->get('listeBonRetour/{id}', ['uses' => 'ListeBonRetourController@showOne']);
+        
+          $router->post('listeBonRetours', ['uses' => 'ListeBonRetourController@create']);
+        
+          $router->delete('listeBonRetour/{id}', ['uses' => 'ListeBonRetourController@delete']);
+        
+          $router->put('listeBonRetour/{id}', ['uses' => 'ListeBonRetourController@update']);
+        });
+        //reservation
+        
+        $router->group(['prefix' => 'reservation'], function () use ($router) {
+          $router->get('reservation',  ['uses' => 'ReservationController@showAll']);
+        
+          $router->get('reservation/{id}', ['uses' => 'ReservationController@showOne']);
+        
+          $router->post('reservations', ['uses' => 'ReservationController@create']);
+        
+          $router->delete('reservation/{id}', ['uses' => 'ReservationController@delete']);
+        
+          $router->put('reservation/{id}', ['uses' => 'ReservationController@update']);
+        });
+         //listreservation
+        
+         $router->group(['prefix' => 'listeReservation'], function () use ($router) {
+          $router->get('listeReservation',  ['uses' => 'ListeReservationController@showAll']);
+        
+          $router->get('listeReservation/{id}', ['uses' => 'ListeReservationController@showOne']);
+        
+          $router->post('listeReservations', ['uses' => 'ListeReservationController@create']);
+        
+          $router->delete('listeReservation/{id}', ['uses' => 'ListeReservationController@delete']);
+        
+          $router->put('listeReservation/{id}', ['uses' => 'ListeReservationController@update']);
+        });

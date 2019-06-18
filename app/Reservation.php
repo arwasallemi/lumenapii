@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Bonretour extends Model
+class Reservation extends Model
 {
 
     /**
@@ -12,9 +12,10 @@ class Bonretour extends Model
      *
      * @var array
      */
-    protected $table='bonretour';
+    protected $table = 'reservation';
     protected $fillable = [
-         'dateRetour','transporteur_nom','matricule','transporteur_tel','etat','note'
+        'nom_client', 'adresse_livraison',
+        'nom_evenement','date_debut_evenement','date_fin_evenement','status'
     ];
 
     /**

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateListeBonRetourTable extends Migration
+class CreateReservationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateListeBonRetourTable extends Migration
      */
     public function up()
     {
-        Schema::create('listeBonRetour', function (Blueprint $table) {
+        Schema::create('reservation', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nom_client');
+            $table->string('adresse_livraison');
+            $table->string('nom_evenement');
+            $table->date('date_debut_evenement');
+            $table->date('date_fin_evenement');
+            $table->string('status');
             $table->timestamps();
-            $table->integer('qte');
-            $table->string('ref');
-            $table->unsignedBigInteger('bonRetour_id');
-            $table->foreign('bonRetour_id')->references('id')->on('bonRetour');
         });
     }
 
@@ -30,6 +32,6 @@ class CreateListeBonRetourTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('listeBonRetour');
+        Schema::dropIfExists('reservation');
     }
 }
