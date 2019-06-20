@@ -12,7 +12,7 @@ class ListeBonRetour extends Model
      *
      * @var array
      */
-    protected $table='listeBonRetour';
+    protected $table='listebonretour';
     protected $fillable = [
         'ref','qte','bonRetour_id'
     ];

@@ -13,7 +13,7 @@ class CreateListeReservationTable extends Migration
      */
     public function up()
     {
-        Schema::create('listeReservation', function (Blueprint $table) {
+        Schema::create('listereservation', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
             $table->integer('qte');

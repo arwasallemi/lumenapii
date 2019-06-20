@@ -13,7 +13,7 @@ class CreateListeBonRetourTable extends Migration
      */
     public function up()
     {
-        Schema::create('listeBonRetour', function (Blueprint $table) {
+        Schema::create('listebonretour', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
             $table->integer('qte');

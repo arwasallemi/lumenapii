@@ -13,7 +13,7 @@ class CreateCodeBarreTable extends Migration
      */
     public function up()
     {
-        Schema::create('codeBarre', function (Blueprint $table) {
+        Schema::create('codebarre', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
         });

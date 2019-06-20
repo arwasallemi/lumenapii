@@ -12,7 +12,7 @@ class ListeReservation extends Model
      *
      * @var array
      */
-    protected $table='listeReservation';
+    protected $table='listereservation';
     protected $fillable = [
         'produit','qte','reservation_id'
     ];
