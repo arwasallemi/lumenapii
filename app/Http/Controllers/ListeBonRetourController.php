@@ -29,7 +29,7 @@ class ListeBonRetourController extends Controller
         $a= ListeBonRetour::findOrFail($id);
         $a->update($request->all());
 
-        return response()->json($author, 200);
+        return response()->json($a, 200);
     }
 
     public function delete($id)
