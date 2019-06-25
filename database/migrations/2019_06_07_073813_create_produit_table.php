@@ -18,6 +18,7 @@ class CreateProduitTable extends Migration
           
             $table->string('libelle');
             $table->string('ref');
+            $table->string('categorie');
             $table->string('note');
             $table->float('prix_location');
             $table->float('prix_location_minimale');
