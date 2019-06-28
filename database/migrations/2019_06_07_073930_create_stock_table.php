@@ -16,11 +16,8 @@ class CreateStockTable extends Migration
         Schema::create('stock', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('qte');
-            $table->unsignedBigInteger('entrepot_id');
-            $table->foreign('entrepot_id')->references('id')->on('entrepot');
-
-            $table->unsignedBigInteger('produit_id');
-            $table->foreign('produit_id')->references('id')->on('produit');
+            $table->string('entrepot');
+            $table->string('produit');
             $table->timestamps();
         });
     }

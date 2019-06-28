@@ -14,7 +14,7 @@ class Stock extends Model
      */
     protected $table='stock';
     protected $fillable = [
-       'qte','entrepot_id','produit_id',
+       'qte','entrepot','produit',
      
     ];
 

@@ -18,6 +18,7 @@ class CreateBonRetourTable extends Migration
             $table->date('dateRetour');
             $table->string('transporteur_nom');
             $table->integer('transporteur_tel');
+            $table->string('equipe_name');
             $table->string('etat');
             $table->string('note');
             $table->string('matricule');

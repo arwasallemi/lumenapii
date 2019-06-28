@@ -16,7 +16,7 @@ class Bonsortie extends Model
     protected $fillable = [
          'dateSortie','dateRetour','dateEvenement',
          'transporteur_nom','transporteur_tel',
-         'nom_client', 'etat','evenement','matricule','adresse_livraison'
+         'nom_client', 'etat','evenement','matricule','adresse_livraison','equipe_name'
     ];
 
     /**

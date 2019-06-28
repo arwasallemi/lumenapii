@@ -14,7 +14,7 @@ class Societe extends Model
      */
     protected $table='societe';
     protected $fillable = [
-       'nom','siege','MF','tel1','tel2','tel3','RIB','image_id',
+       'nom','siege','MF','tel1','tel2','tel3','RIB','alt'
      
     ];
 
