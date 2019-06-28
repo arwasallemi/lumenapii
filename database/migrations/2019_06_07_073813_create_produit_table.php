@@ -18,17 +18,18 @@ class CreateProduitTable extends Migration
           
             $table->string('libelle');
             $table->string('ref');
+            $table->string('categorie');
             $table->string('note');
             $table->float('prix_location');
             $table->float('prix_location_minimale');
-            $table->unsignedBigInteger('qrCode_id');
-            $table->foreign('qrCode_id')->references('id')->on('qrCode');
+            $table->text('qrCode');
+       
 
-            $table->unsignedBigInteger('codeBarre_id');
-            $table->foreign('codeBarre_id')->references('id')->on('codeBarre');
+            $table->text('codeBarre');
+     
 
-            $table->unsignedBigInteger('image_id');
-            $table->foreign('image_id')->references('id')->on('image');
+            $table->text('image');
+        
 
             
             $table->timestamps();
@@ -43,5 +44,6 @@ class CreateProduitTable extends Migration
     public function down()
     {
         Schema::dropIfExists('produit');
+       
     }
 }

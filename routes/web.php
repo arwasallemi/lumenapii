@@ -353,3 +353,4 @@ $router->group(['prefix' => 'client'], function () use ($router) {
         
           $router->put('listeReservation/{id}', ['uses' => 'ListeReservationController@update']);
         });
+     

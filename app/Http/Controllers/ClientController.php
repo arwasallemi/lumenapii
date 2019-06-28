@@ -30,7 +30,7 @@ class ClientController extends Controller
         $author = Client::findOrFail($id);
         $author->update($request->all());
 
-        return response()->json($author, 200);
+        return response()->json($a, 200);
     }
 
     public function delete($id)
