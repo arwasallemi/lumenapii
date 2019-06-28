@@ -14,7 +14,7 @@ class Employeur extends Model
      */
     protected $table='employeur';
     protected $fillable = [
-         'nom','prenom','sexe','cin','email','tel','adresse','region_id',
+         'name','sexe','cin','email','tel','adresse'
      
     ];
 

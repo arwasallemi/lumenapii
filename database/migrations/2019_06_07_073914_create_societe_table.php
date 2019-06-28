@@ -21,9 +21,9 @@ class CreateSocieteTable extends Migration
             $table->integer('tel1');
             $table->integer('tel2');
             $table->integer('tel3');
-            $table->string('RIB');
-            $table->text('image');
-       
+            $table->string('RIB'); 
+            $table->text('alt');
+
 
             $table->timestamps();
         });

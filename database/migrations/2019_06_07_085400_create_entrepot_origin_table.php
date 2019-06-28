@@ -13,7 +13,7 @@ class CreateEntrepotOriginTable extends Migration
      */
     public function up()
     {
-        Schema::create('entrepotOrigin', function (Blueprint $table) {
+        Schema::create('entrepotorigin', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('libelle');
             $table->string('adresse');

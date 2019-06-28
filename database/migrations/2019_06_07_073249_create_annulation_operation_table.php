@@ -28,8 +28,8 @@ class CreateAnnulationOperationTable extends Migration
             $table->bigIncrements('id');
             $table->string('dateAnnulation');
             $table->timestamps();
-            $table->unsignedBigInteger('annulationOperation_id');
-            $table->foreign('annulationOperation_id')->references('id')->on('operation');
+            $table->unsignedBigInteger('operation_id');
+            $table->foreign('operation_id')->references('id')->on('operation');
         });
     }
 

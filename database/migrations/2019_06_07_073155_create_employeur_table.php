@@ -15,16 +15,13 @@ class CreateEmployeurTable extends Migration
     {if(!Schema::hasTable('employeur')){
         Schema::create('employeur', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nom');
-            $table->string('prenom');
+            $table->string('name');
             $table->string('sexe');
             $table->integer('cin');
             $table->string('email');
             $table->integer('tel');
             $table->string('adresse');
             $table->timestamps();
-            $table->unsignedBigInteger('region_id');
-            $table->foreign('region_id')->references('id')->on('region');
         });
     }
 }

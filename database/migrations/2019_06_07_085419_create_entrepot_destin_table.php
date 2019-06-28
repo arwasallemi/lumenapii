@@ -13,7 +13,7 @@ class CreateEntrepotDestinTable extends Migration
      */
     public function up()
     {
-        Schema::create('entrepotDestin', function (Blueprint $table) {
+        Schema::create('entrepotdestin', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('libelle');
             $table->string('adresse');

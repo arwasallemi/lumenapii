@@ -13,7 +13,7 @@ class CreateAjoutDsStockTable extends Migration
      */
     public function up()
     {
-        Schema::create('ajoutDsStock', function (Blueprint $table) {
+        Schema::create('ajoutdsstock', function (Blueprint $table) {
             $table->bigIncrements('id');
 
             $table->unsignedBigInteger('entrepot_id');

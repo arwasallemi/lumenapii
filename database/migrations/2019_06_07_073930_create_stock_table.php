@@ -16,10 +16,10 @@ class CreateStockTable extends Migration
         Schema::create('stock', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('qte');
+            $table->string('produit');
             $table->string('entrepot');
            
 
-            $table->string('produit');
           
             $table->timestamps();
         });

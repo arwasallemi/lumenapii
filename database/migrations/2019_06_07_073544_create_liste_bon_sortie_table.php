@@ -13,7 +13,7 @@ class CreateListeBonSortieTable extends Migration
      */
     public function up()
     {
-        Schema::create('listeBonSortie', function (Blueprint $table) {
+        Schema::create('listebonsortie', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('ref');
             $table->integer('qte');

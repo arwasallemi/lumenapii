@@ -13,7 +13,7 @@ class CreateRegularStockTable extends Migration
      */
     public function up()
     {
-        Schema::create('regularStock', function (Blueprint $table) {
+        Schema::create('regularstock', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nom');
             $table->integer('qteInitiale');

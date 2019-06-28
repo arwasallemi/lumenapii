@@ -13,7 +13,7 @@ class CreateQrCodeTable extends Migration
      */
     public function up()
     {
-        Schema::create('qrCode', function (Blueprint $table) {
+        Schema::create('qrcode', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
         });

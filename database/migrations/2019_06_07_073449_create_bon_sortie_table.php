@@ -13,7 +13,7 @@ class CreateBonSortieTable extends Migration
      */
     public function up()
     {
-        Schema::create('bonSortie', function (Blueprint $table) {
+        Schema::create('bonsortie', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
             $table->date('dateSortie');
@@ -26,6 +26,8 @@ class CreateBonSortieTable extends Migration
             $table->string('matricule');
             $table->string('evenement');
             $table->string('nom_client');
+            $table->string('equipe_name');
+            
           
           
 
