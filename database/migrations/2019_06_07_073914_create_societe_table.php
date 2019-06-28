@@ -22,8 +22,8 @@ class CreateSocieteTable extends Migration
             $table->integer('tel2');
             $table->integer('tel3');
             $table->string('RIB');
-            $table->unsignedBigInteger('image_id');
-            $table->foreign('image_id')->references('id')->on('image');
+            $table->text('image');
+       
 
             $table->timestamps();
         });

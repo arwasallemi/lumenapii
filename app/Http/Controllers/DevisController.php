@@ -8,12 +8,12 @@ use Illuminate\Http\Request;
 class DevisController extends Controller
 {
 
-    public function showAllClients()
+    public function showAll()
     {
         return response()->json(Devis::all());
     }
 
-    public function showOneClient($id)
+    public function showOne($id)
     {
         return response()->json(Devis::find($id));
     }

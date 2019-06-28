@@ -16,7 +16,7 @@ class EmployeurController extends Controller
     {
         return response()->json(Employeur::find($id));
     }
-
+    
     public function create(Request $request)
     {
         $a = Employeur::create($request->all());

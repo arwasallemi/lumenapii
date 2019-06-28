@@ -144,6 +144,7 @@ $router->group(['prefix' => 'client'], function () use ($router) {
             $router->delete('employeurs/{id}', ['uses' => 'EmployeurController@delete']);
           
             $router->put('employeurs/{id}', ['uses' => 'EmployeurController@update']);
+            
           });
            ////entrepot
                   $router->group(['prefix' => 'entrepot'], function () use ($router) {

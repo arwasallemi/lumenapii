@@ -34,7 +34,7 @@ class BonsortieController extends Controller
 
     public function delete($id)
     {
-        Bonretour::findOrFail($id)->delete();
+        Bonsortie::findOrFail($id)->delete();
         return response('Deleted Successfully', 200);
     }
 }
