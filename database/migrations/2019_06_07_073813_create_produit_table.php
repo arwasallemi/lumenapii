@@ -23,15 +23,8 @@ class CreateProduitTable extends Migration
             $table->float('prix_location');
             $table->float('prix_location_minimale');
             $table->text('qrCode');
-       
-
             $table->text('codeBarre');
-     
-
             $table->text('image');
-        
-
-            
             $table->timestamps();
         });
     }

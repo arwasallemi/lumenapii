@@ -17,8 +17,10 @@ class CreateListeBonSortieTable extends Migration
             $table->bigIncrements('id');
             $table->string('ref');
             $table->integer('qte');
+            $table->date('dateRetour');
             $table->unsignedBigInteger('bonSortie_id');
             $table->foreign('bonSortie_id')->references('id')->on('bonSortie');
+        
             $table->timestamps();
         });
     }

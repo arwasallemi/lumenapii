@@ -18,6 +18,8 @@ class CreateStockTable extends Migration
             $table->integer('qte');
             $table->string('produit');
             $table->string('entrepot');
+            $table->string('ref');
+
            
 
           

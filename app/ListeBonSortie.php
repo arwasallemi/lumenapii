@@ -14,7 +14,7 @@ class ListeBonSortie extends Model
      */
     protected $table='listebonsortie';
     protected $fillable = [
-        'ref','qte','bonSortie_id'
+        'ref','qte','bonSortie_id','dateRetour',
     ];
 
     /**
