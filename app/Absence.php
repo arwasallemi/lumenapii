@@ -14,8 +14,7 @@ class Absence extends Model
      */
     protected $table='abscence';
     protected $fillable = [
-        'nbrJour','date_abscence','date_debut_abscence',
-        'date_fin_abscence','motif_abscence','employeur_id'
+        'nbrJour','date_abscence','date_retour','motif_abscence','employeur_id'
     ];
 
     /**

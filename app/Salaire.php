@@ -13,9 +13,7 @@ class Salaire extends Model
      * @var array
      */
     protected $table='salaire';
-    protected $fillable = [
-
-       'nbrJour','salaire_unitaire','nbrHeure_travail','nbrHeure_ajoute'
+    protected $fillable = ['nbrJour','salaire_unitaire','nbrHeure_travail','nbrHeure_ajoute'
      
     ];
 

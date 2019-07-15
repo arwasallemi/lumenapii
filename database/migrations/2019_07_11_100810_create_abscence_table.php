@@ -18,8 +18,7 @@ class CreateAbscenceTable extends Migration
             $table->timestamps();
             $table->integer('nbrJour');
             $table->date('date_abscence');
-            $table->date('date_debut_abscence');
-            $table->date('date_fin_abscence');
+            $table->date('date_retour');
             $table->string('motif_abscence');
             $table->unsignedBigInteger('employeur_id');
             $table->foreign('employeur_id')->references('id')->on('employeur');
