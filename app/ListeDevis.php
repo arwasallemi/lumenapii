@@ -14,7 +14,7 @@ class ListeDevis extends Model
      */
     protected $table='listedevis';
     protected $fillable = [
-        'produit','qte','devis_id',
+        'produit','qte','devis_id','prix_unitaire_HT','prix_total_TTC',
     ];
 
     /**

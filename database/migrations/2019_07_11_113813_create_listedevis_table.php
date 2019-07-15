@@ -18,6 +18,8 @@ class CreateListedevisTable extends Migration
             $table->timestamps();
             $table->string('produit');
             $table->integer('qte');
+            $table->float('prix_unitaire_HT');
+            $table->float('prix_total_TTC');
             $table->unsignedBigInteger('devis_id');
             $table->foreign('devis_id')->references('id')->on('devis');
         });
