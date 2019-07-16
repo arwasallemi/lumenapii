@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Produit extends Model
+class Facture extends Model
 {
 
     /**
@@ -12,11 +12,13 @@ class Produit extends Model
      *
      * @var array
      */
-    protected $table='produit';
+    protected $table='facture';
     protected $fillable = [
-
-        'libelle', 'ref', 'note', 'prix_location','prix_location_minimale', 'qrCode', 'codeBarre','image','categorie','tva'
-
+       'ref','societe','type',
+       'remise','date','condition_regl',
+       'date_limite_reglement','mode_regl',
+       'cpte_bancaire','montant_Ht','montant_tva','montant_ttc','etat','projet','incoterms'
+     
     ];
 
     /**

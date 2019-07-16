@@ -447,4 +447,30 @@ $router->group(['prefix' => 'client'], function () use ($router) {
           
             $router->put('prime/{id}', ['uses' => 'PrimeController@update']);
           });
+            //facture
+          
+            $router->group(['prefix' => 'facture'], function () use ($router) {
+              $router->get('facture',  ['uses' => 'FactureController@showAll']);
+            
+              $router->get('facture/{id}', ['uses' => 'FactureController@showOne']);
+            
+              $router->post('factures', ['uses' => 'FactureController@create']);
+            
+              $router->delete('facture/{id}', ['uses' => 'FactureController@delete']);
+            
+              $router->put('facture/{id}', ['uses' => 'FactureController@update']);
+            });
+              //reglement
+          
+          $router->group(['prefix' => 'reglement'], function () use ($router) {
+            $router->get('reglement',  ['uses' => 'ReglementController@showAll']);
+          
+            $router->get('reglement/{id}', ['uses' => 'ReglementController@showOne']);
+          
+            $router->post('reglements', ['uses' => 'ReglementController@create']);
+          
+            $router->delete('reglement/{id}', ['uses' => 'ReglementController@delete']);
+          
+            $router->put('reglement/{id}', ['uses' => 'ReglementController@update']);
+          });
        
