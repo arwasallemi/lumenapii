@@ -473,4 +473,16 @@ $router->group(['prefix' => 'client'], function () use ($router) {
           
             $router->put('reglement/{id}', ['uses' => 'ReglementController@update']);
           });
+          //listFact
+          $router->group(['prefix' => 'listFact'], function () use ($router) {
+            $router->get('listFact',  ['uses' => 'ListFactController@showAll']);
+          
+            $router->get('listFact/{id}', ['uses' => 'ListFactController@showOne']);
+          
+            $router->post('listFacts', ['uses' => 'ListFactController@create']);
+          
+            $router->delete('listFact/{id}', ['uses' => 'ListFactController@delete']);
+          
+            $router->put('listFact/{id}', ['uses' => 'ListFactController@update']);
+          });
        
