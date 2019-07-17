@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Societe extends Model
+class Reglement extends Model
 {
 
     /**
@@ -12,11 +12,10 @@ class Societe extends Model
      *
      * @var array
      */
-    protected $table='societe';
+    protected $table='reglement';
     protected $fillable = [
-
-       'nom','siege','MF','tel1','tel2','tel3','RIB','alt'
-
+        'societe','date','cpte_aCrediter','mode_regl',
+       'num_cheque','emetteur','banque','commentaire','refFacture'
      
     ];
 

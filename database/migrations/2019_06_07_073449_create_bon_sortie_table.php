@@ -27,6 +27,8 @@ class CreateBonSortieTable extends Migration
             $table->string('evenement');
             $table->string('nom_client');
             $table->string('equipe_name');
+            $table->string('entrepot');
+
             
           
           

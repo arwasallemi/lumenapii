@@ -304,6 +304,19 @@ $router->group(['prefix' => 'client'], function () use ($router) {
     
       $router->put('devis/{id}', ['uses' => 'DevisController@update']);
     });
+    //liste devis
+    $router->group(['prefix' => 'listedevi'], function () use ($router) {
+      $router->get('listedevi',  ['uses' => 'ListeDevisController@showAll']);
+    
+      $router->get('listedevi/{id}', ['uses' => 'ListeDevisController@showOne']);
+    
+      $router->post('listedevis', ['uses' => 'ListeDevisController@create']);
+    
+      $router->delete('listedevi/{id}', ['uses' => 'ListeDevisController@delete']);
+    
+      $router->put('listedevi/{id}', ['uses' => 'ListeDevisController@update']);
+    });
+
     //liste Bon sortie 
       $router->group(['prefix' => 'listeBonSortie'], function () use ($router) {
         $router->get('listeBonSortie',  ['uses' => 'ListeBonSortieController@showAll']);
@@ -355,3 +368,109 @@ $router->group(['prefix' => 'client'], function () use ($router) {
           $router->put('listeReservation/{id}', ['uses' => 'ListeReservationController@update']);
         });
      
+        //abscence
+     
+        
+          $router->group(['prefix' => 'abscence'], function () use ($router) {
+            $router->get('abscence',  ['uses' => 'AbscenceController@showAll']);
+          
+            $router->get('abscence/{id}', ['uses' => 'AbscenceController@showOne']);
+          
+            $router->post('abscences', ['uses' => 'AbscenceController@create']);
+          
+            $router->delete('abscence/{id}', ['uses' => 'AbscenceController@delete']);
+          
+            $router->put('abscence/{id}', ['uses' => 'AbscenceController@update']);
+          });
+          //pointage
+          
+          $router->group(['prefix' => 'pointage'], function () use ($router) {
+            $router->get('pointage',  ['uses' => 'PointageController@showAll']);
+          
+            $router->get('pointage/{id}', ['uses' => 'PointageController@showOne']);
+          
+            $router->post('pointages', ['uses' => 'PointageController@create']);
+          
+            $router->delete('pointage/{id}', ['uses' => 'PointageController@delete']);
+          
+            $router->put('pointage/{id}', ['uses' => 'PointageController@update']);
+          });
+          //demande congé
+          
+          $router->group(['prefix' => 'demandeConge'], function () use ($router) {
+            $router->get('demandeConge',  ['uses' => 'DemandeCongeController@showAll']);
+          
+            $router->get('demandeConge/{id}', ['uses' => 'DemandeCongeController@showOne']);
+          
+            $router->post('demandeConges', ['uses' => 'DemandeCongeController@create']);
+          
+            $router->delete('demandeConge/{id}', ['uses' => 'DemandeCongeController@delete']);
+          
+            $router->put('demandeConge/{id}', ['uses' => 'DemandeCongeController@update']);
+          });
+          //solde Congé
+          
+          $router->group(['prefix' => 'soldeConge'], function () use ($router) {
+            $router->get('soldeConge',  ['uses' => 'SoldeCongeController@showAll']);
+          
+            $router->get('soldeConge/{id}', ['uses' => 'SoldeCongeController@showOne']);
+          
+            $router->post('soldeConges', ['uses' => 'SoldeCongeController@create']);
+          
+            $router->delete('soldeConge/{id}', ['uses' => 'SoldeCongeController@delete']);
+          
+            $router->put('soldeConge/{id}', ['uses' => 'SoldeCongeController@update']);
+          });
+          //salaire
+          
+          $router->group(['prefix' => 'salaire'], function () use ($router) {
+            $router->get('salaire',  ['uses' => 'SalaireController@showAll']);
+          
+            $router->get('salaire/{id}', ['uses' => 'SalaireController@showOne']);
+          
+            $router->post('salaires', ['uses' => 'SalaireController@create']);
+          
+            $router->delete('salaire/{id}', ['uses' => 'SalaireController@delete']);
+          
+            $router->put('salaire/{id}', ['uses' => 'SalaireController@update']);
+          });
+          //prime
+          
+          $router->group(['prefix' => 'prime'], function () use ($router) {
+            $router->get('prime',  ['uses' => 'PrimeController@showAll']);
+          
+            $router->get('prime/{id}', ['uses' => 'PrimeController@showOne']);
+          
+            $router->post('primes', ['uses' => 'PrimeController@create']);
+          
+            $router->delete('prime/{id}', ['uses' => 'PrimeController@delete']);
+          
+            $router->put('prime/{id}', ['uses' => 'PrimeController@update']);
+          });
+            //facture
+          
+            $router->group(['prefix' => 'facture'], function () use ($router) {
+              $router->get('facture',  ['uses' => 'FactureController@showAll']);
+            
+              $router->get('facture/{id}', ['uses' => 'FactureController@showOne']);
+            
+              $router->post('factures', ['uses' => 'FactureController@create']);
+            
+              $router->delete('facture/{id}', ['uses' => 'FactureController@delete']);
+            
+              $router->put('facture/{id}', ['uses' => 'FactureController@update']);
+            });
+              //reglement
+          
+          $router->group(['prefix' => 'reglement'], function () use ($router) {
+            $router->get('reglement',  ['uses' => 'ReglementController@showAll']);
+          
+            $router->get('reglement/{id}', ['uses' => 'ReglementController@showOne']);
+          
+            $router->post('reglements', ['uses' => 'ReglementController@create']);
+          
+            $router->delete('reglement/{id}', ['uses' => 'ReglementController@delete']);
+          
+            $router->put('reglement/{id}', ['uses' => 'ReglementController@update']);
+          });
+       

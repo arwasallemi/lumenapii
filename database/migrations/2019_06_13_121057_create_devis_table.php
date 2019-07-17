@@ -17,6 +17,7 @@ class CreateDevisTable extends Migration
             $table->bigIncrements('id');
             $table->date('date');
             $table->integer('duree');
+            $table->float('remise');
             $table->string('condition');
             $table->string('mode');
             $table->string('delai');

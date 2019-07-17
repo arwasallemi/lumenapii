@@ -14,7 +14,7 @@ class Devis extends Model
      */
     protected $table='devis';
     protected $fillable = [
-        'delai','date','duree','condition','mode','note','deteLivraison','client'
+        'delai','date','duree','condition','mode','note','deteLivraison','client','remise'
     ];
 
     /**
