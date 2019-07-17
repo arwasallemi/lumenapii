@@ -22,6 +22,7 @@ class CreateBonRetourTable extends Migration
             $table->string('etat');
             $table->string('note');
             $table->string('matricule');
+            $table->string('entrepot');
             $table->timestamps();
                  });
     }

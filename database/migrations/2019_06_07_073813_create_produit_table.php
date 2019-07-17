@@ -25,6 +25,7 @@ class CreateProduitTable extends Migration
             $table->text('qrCode');
             $table->text('codeBarre');
             $table->text('image');
+            $table->string('tva');
             $table->timestamps();
         });
     }

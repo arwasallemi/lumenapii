@@ -14,7 +14,7 @@ class Bonretour extends Model
      */
     protected $table='bonretour';
     protected $fillable = [
-         'dateRetour','transporteur_nom','matricule','transporteur_tel','etat','note','equipe_name'
+         'dateRetour','transporteur_nom','matricule','transporteur_tel','etat','note','equipe_name','entrepot'
     ];
 
     /**
